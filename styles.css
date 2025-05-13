@@ -1,0 +1,133 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    background-size: 600% 600%;
+    animation: gradientBG 15s ease infinite;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    transition: background 0.5s, color 0.5s;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.controls button {
+    background: linear-gradient(145deg, #1e1e1e, #2c2c2c);
+    border: 2px solid #00ffff;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,255,255,0.3);
+    transition: all 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #00ffff;
+    color: #000;
+}
+
+section {
+    padding: 2rem;
+    margin: 1rem auto;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.3);
+    max-width: 900px;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #111;
+    font-size: 0.9rem;
+}
+
+.qr-code {
+    width: 180px;
+    border-radius: 15px;
+    margin-top: 1rem;
+    box-shadow: 0 0 20px rgba(0,255,255,0.2);
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body.dark {
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: #e0e0e0;
+}
+
+iframe {
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0,255,255,0.2);
+}
+
+
+.anime-character {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.anime-character img {
+    width: 180px;
+    animation: floatAnime 4s ease-in-out infinite;
+}
+
+@keyframes floatAnime {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.anime-section {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.anime-btn {
+    transition: transform 0.3s ease;
+}
+
+.anime-btn:hover {
+    transform: scale(1.05);
+}
